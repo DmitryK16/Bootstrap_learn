@@ -236,7 +236,7 @@ body .my-carousel .carousel-item img {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
+    height: 200px;
     padding: 20px;
 }
 
@@ -245,7 +245,7 @@ body .my-carousel .carousel-item img {
 }
 
 .product-card .product-details {
-    padding: 30px;
+    padding: 20px;
 }
 
 .product-card .product-details h4 a {
@@ -301,6 +301,15 @@ body .my-carousel .carousel-item img {
     .product-card .product-thumb {
         height: 200px;
     }
+    .product-card .product-details h4 a {
+        height: 55px;
+    }
+    .product-card .product-price {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
 }
 
 @media only screen and (max-width: 420px) {
