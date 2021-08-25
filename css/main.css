@@ -12,6 +12,9 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+h1 {
+	font-size: 1.5rem;
+}
 
 a {
 	text-decoration: none;
@@ -103,6 +106,18 @@ li a.dropdown-item:focus,
 li a.dropdown-item:hover {
 	background-color: #ee6e73;
 	color: #fff;
+}
+
+.form-control:focus {
+	color: #212529;
+	background-color: #fff;
+	border-color: #ee6e73;
+	outline: 0;
+	box-shadow: 0 0 0 .1rem rgba(238, 110, 115,.25);
+}
+
+.btn-danger {
+	background-color: #ee6e73;
 }
 
 /* Header top */
@@ -228,7 +243,7 @@ li a.dropdown-item:hover {
 	box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
 }
 
-.product-card .product-thumb {
+.product-card .product-thumb a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -266,13 +281,13 @@ li a.dropdown-item:hover {
 	padding-top: 20px;
 }
 
-.product-card .product-price {
+.product-price {
 	font-size: 18px;
 	color: #ee6e73;
 	font-weight: 600;
 }
 
-.product-card .product-price small {
+.product-price small {
 	color: #ccc;
 	font-weight: 400;
 	text-decoration: line-through;
@@ -392,12 +407,111 @@ li a.dropdown-item:hover {
 	transition: all .5s;
 }
 
+/* Category */
+
+.sidebar-toggler .btn {
+	width: 100%;
+}
+
+.sidebar-toggle {
+	display: none;
+}
+
+.sidebar .list-group-item.active {
+	background-color: #ee6e73;
+	border-color: #ee6e73;
+}
+
+.page-link {
+	color: #ee6e73;
+}
+
+.page-item.active .page-link {
+	background-color: #ee6e73;
+	border-color: #ee6e73;
+}
+
+.page-link:hover {
+	color: #fff;
+	background-color: #ee6e73;
+	border-color: #ee6e73;
+}
+
+.input-group-text, .form-select {
+	font-size: 14px;
+}
+
+/* Category */
+
+/* Product */
+
+.thumbnail {
+	display: block;
+	padding: 4px;
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	transition: border-color .5s;
+}
+
+a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+	border-color: #ee6e73;
+}
+
+.thumbnails .thumb-main a {
+	padding: 20px;
+}
+
+.thumbnails .thumb-main img {
+	max-width: 300px;
+}
+
+.thumbnails .thumb-additional {
+	float: left;
+	margin-right: 20px;
+	max-width: 100px;
+}
+
+.mfp-zoom-in .mfp-with-anim {
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+	opacity: 1;
+	transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+	transform: scale(0.8);
+	opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+/* Product */
+
 
 /* https://bootstrap-menu.com/detail-basic-hover.html */
 @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+
+	.sidebar-toggler {
+		display: none;
+	}
+
+	.sidebar-toggle {
+		display: block !important;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -432,6 +546,10 @@ li a.dropdown-item:hover {
 
 	.modal-body img {
 		max-width: 50px;
+	}
+
+	.thumbnails .thumb-main img {
+		max-width: 100%;
 	}
 
 }
